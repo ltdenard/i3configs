@@ -1,0 +1,34 @@
+general {
+        colors = true
+        interval = 5
+        markup = "pango"
+}
+
+order += "tztime local"
+order += "tztime uk"
+order += "tztime sing"
+
+tztime local {
+        format = "<span foreground='#00ff00'>ATL: %time</span>"
+        format_time = "%Y-%m-%d %H:%M:%S"
+}
+
+tztime uk {
+        format = "<span foreground='#ffff00'>UK: %time</span>"
+        format_time = "%Y-%m-%d %H:%M:%S"
+        timezone = "etc/UTC"
+}
+
+tztime sing {
+        format = "<span foreground='#00ffff'>Singapore: %time</span>"
+        format_time = "%Y-%m-%d %H:%M:%S"
+        timezone = "Asia/Singapore"
+}
+
+load {
+        format = "%5min"
+}
+
+disk "/" {
+        format = "%free"
+}
