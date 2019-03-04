@@ -53,7 +53,7 @@ client.focused_inactive #333333 #1c1c1c #ffffff #484e50   #1c1c1c
 client.unfocused        #333333 #1c1c1c #888888 #292d2e   #1c1c1c
 
 # lock screen
-bindsym Control+Mod1+l exec "i3lock --linecolor=1c1c1c1c --ringcolor=1c1c1c1c --insidecolor=00000000 --separatorcolor=ff0000ff --keyhlcolor=ff0000ff --verifcolor=00000000 --bshlcolor=1c1c1c1c --layoutcolor=1c1c1c1c --wrongcolor=ff0000ff --timecolor=1c1c1c1c --ringwrongcolor=00000000 --ringvercolor=00000000 --insidewrongcolor=00000000  --insidevercolor=00000000 -c 000000 --ring-width=10.0"
+bindsym Control+Mod1+l exec "i3lock --linecolor=c1c1c1c1 --ringcolor=c1c1c1c1 --insidecolor=00000000 --separatorcolor=ff0000ff --keyhlcolor=ff0000ff --verifcolor=00000000 --bshlcolor=c1c1c1c1 --layoutcolor=c1c1c1c1 --wrongcolor=ff0000ff --timecolor=c1c1c1c1 --ringwrongcolor=00000000 --ringvercolor=00000000 --insidewrongcolor=00000000  --insidevercolor=00000000 -c 000000 --ring-width=10.0"
 
 
 # change focus
