@@ -7,7 +7,7 @@
 
 # i3 config file (v4)
 #
-# Please see http://i3wm.org/docs/userguide.html for a complete reference!
+# Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
 
@@ -41,6 +41,20 @@ bindsym $mod+d exec dmenu_run
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+
+# start up
+exec --no-startup-id feh --bg-fill ~/Pictures/50.jpg
+exec --no-startup-id compton --config ~/.config/compton.conf 
+
+# window colors
+# class                 border  backgr. text    indicator child_border
+client.focused          #333333 #1c1c1c #ffffff #2e9ef4   #1c1c1c
+client.focused_inactive #333333 #1c1c1c #ffffff #484e50   #1c1c1c
+client.unfocused        #333333 #1c1c1c #888888 #292d2e   #1c1c1c
+
+# lock screen
+bindsym Control+Mod1+l exec "i3lock --linecolor=1c1c1c1c --ringcolor=1c1c1c1c --insidecolor=00000000 --separatorcolor=ff0000ff --keyhlcolor=ff0000ff --verifcolor=00000000 --bshlcolor=1c1c1c1c --layoutcolor=1c1c1c1c --wrongcolor=ff0000ff --timecolor=1c1c1c1c --ringwrongcolor=00000000 --ringvercolor=00000000 --insidewrongcolor=00000000  --insidevercolor=00000000 -c 000000 --ring-width=10.0"
+
 
 # change focus
 bindsym $mod+j focus left
@@ -122,9 +136,6 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-
-# lock screen shortcut
-bindsym Control+Mod1+l exec "i3lock --linecolor=ffffffff --ringcolor=ffffffff --insidecolor=00000000 --separatorcolor=00ffffff --keyhlcolor=00ffffff --verifcolor=00000000 --bshlcolor=00ffffff --layoutcolor=ffffffff --wrongcolor=ff000000 --timecolor=ffffffff --ringwrongcolor=ffffffff --ringvercolor=ffffffff --insidewrongcolor=00000000  --insidevercolor=00000000 -c 000000 --ring-width=10.0"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
