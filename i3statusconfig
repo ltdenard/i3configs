@@ -1,55 +1,81 @@
 general {
+
         colors = true
+
         interval = 1
+
         markup = "pango"
+
 }
 
+
+
 order += "disk /"
+
 order += "load"
-order += "battery all"
+
 order += "wireless _first_"
+
 order += "ethernet _first_"
+
 order += "tztime local"
+
 order += "tztime utc"
-order += "tztime sing"
+
+
+
 
 
 wireless _first_ {
+
         format_up = "W: %essid(%quality) %ip"
+
         format_down = "W: down"
+
 }
+
+
 
 ethernet _first_ {
+
         # if you use %speed, i3status requires root privileges
+
         format_up = "E: %ip"
+
         format_down = "E: down"
+
 }
 
-battery all {
-        format = "<span foreground='#c1c1c1'>%status %percentage %remaining</span>"
-}
 
-tztime local {
-        format = "<span foreground='#00ff00'>%time</span>"
-        format_time = "%Y-%m-%d %H/%I:%M:%S"
-}
 
 load {
-        format = "<span foreground='#c1c1c1'>%1min</span>"
+
+        format = "%1min"
+
 }
+
+
 
 disk "/" {
-        format = "<span foreground='#c1c1c1'>%avail</span>"
+
+        format = "%avail"
+
 }
+
+
+
+tztime local {
+
+        format = "<span foreground='#00ff00'>ET: %m-%d %H/%I:%M:%S</span>"
+
+}
+
+
 
 tztime utc {
-        format = "<span foreground='#c1c1c1'>UTC: %time</span>"
-        format_time = "%Y-%m-%d %H/%I:%M:%S"
-        timezone = "etc/UTC"
-}
 
-tztime sing {
-        format = "<span foreground='#c1c1c1'>Singapore: %time</span>"
-        format_time = "%Y-%m-%d %H/%I:%M:%S"
-        timezone = "Asia/Singapore"
+        format = "<span foreground='#00ff00'>UTC: %m-%d %H/%I:%M:%S</span>"
+
+        timezone = etc/UTC
+
 }
